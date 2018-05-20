@@ -2,3 +2,5 @@
 - hosts: dev
   roles:
     - editor-vim
+  vars:
+    editor_vim_template_vimrc: "ngenetzky/vimrc.vim"

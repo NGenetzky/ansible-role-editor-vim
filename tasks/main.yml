@@ -17,5 +17,5 @@
 
 - name: vimrc
   template:
-      src: vimrc.vim
+      src: "{{ editor_vim_template_vimrc }}"
       dest: ~/.config/editor-vim/vimrc.vim

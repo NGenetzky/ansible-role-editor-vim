@@ -1,2 +1,4 @@
 ---
 # defaults file for editor-vim
+
+editor_vim_template_vimrc: "ngenetzky/vimrc.vim"
