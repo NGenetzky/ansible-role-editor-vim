@@ -1,2 +1,2 @@
-localhost
-
+[dev]
+localhost ansible_user=ngenetzky
