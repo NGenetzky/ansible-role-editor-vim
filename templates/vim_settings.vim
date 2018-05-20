@@ -111,7 +111,7 @@ set wildignore+=vendor
 set wildmode=longest:full,list:full
 
 if filereadable(expand("~/.config/editor-vim/vim_settings.vim"))
-  source ~/.config/editor-vim/plug.vim
+  source ~/.config/editor-vim/vim_settings.vim
 endif
 
 " } vim_settings
