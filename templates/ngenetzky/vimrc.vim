@@ -7,6 +7,9 @@
 
 {% include 'vim-plug.vim' %}
 
+
+{% include 'plugin_settings.vim' %}
+
 """ modelines
 " https://vi.stackexchange.com/a/3820
 " vim:fdm=expr:fdl=0
