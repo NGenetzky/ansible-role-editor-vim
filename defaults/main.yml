@@ -2,3 +2,5 @@
 # defaults file for editor-vim
 
 editor_vim_template_vimrc: "ngenetzky/vimrc.vim"
+editor_vim_configdir: "{{ ansible_env.HOME }}/.config/editor-vim/"
+editor_vim_datadir: "{{ ansible_env.HOME }}/.local/share/editor-vim/"

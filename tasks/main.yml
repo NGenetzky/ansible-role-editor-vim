@@ -12,10 +12,15 @@
 
 - name: Make sure configuration directory exists.
   file:
-      path: ~/.config/editor-vim/
+      path: "{{ editor_vim_configdir }}"
+      state: directory
+
+- name: Make sure data directory exists.
+  file:
+      path: "{{ editor_vim_datadir }}"
       state: directory
 
 - name: vimrc
   template:
       src: "{{ editor_vim_template_vimrc }}"
-      dest: ~/.config/editor-vim/vimrc.vim
+      dest: "{{ editor_vim_configdir }}/vimrc.vim"

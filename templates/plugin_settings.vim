@@ -1,10 +1,18 @@
 """ plugin_settings
 "*******************************************************************************
 
-colorscheme solarized
+try 
+  colorscheme solarized
+  catch
+  try 
+    colorscheme peachpuff
+    catch
+  endtry
+endtry
 
-if filereadable(expand("~/.config/editor-vim/plugin_settings.vim"))
-  source ~/.config/editor-vim/plugin_settings.vim
+if filereadable(expand('{{ editor_vim_configdir }}/plugin_settings.vim'))
+  source {{ editor_vim_configdir }}/plugin_settings.vim
 endif
+
 " plugin_settings
 "*******************************************************************************
