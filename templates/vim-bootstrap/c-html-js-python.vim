@@ -26,7 +26,7 @@ if !filereadable(vimplug_exists)
 endif
 
 " Required:
-call plug#begin(expand('~/.vim/plugged'))
+call plug#begin(expand('{{ editor_vim_datadir }}/plugged'))
 
 "*****************************************************************************
 "" Plug install packages
@@ -112,6 +112,20 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
 endif
+
+"*****************************************************************************
+"" editor-vim bundles
+"
+
+{% include 'plugins.vim' %}
+
+if filereadable(expand('{{ editor_vim_configdir }}/plugins.vim'))
+  source {{ editor_vim_configdir }}/plugins.vim
+endif
+
+"
+"" editor-vim bundles
+"*****************************************************************************
 
 call plug#end()
 
@@ -200,7 +214,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
+
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -528,6 +542,26 @@ let python_highlight_all = 1
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+"*****************************************************************************
+"" editor-vim config
+"
+
+{% include 'vim_settings.vim' %}
+
+if filereadable(expand('{{ editor_vim_configdir }}/vim_settings.vim'))
+  source {{ editor_vim_configdir }}/vim_settings.vim
+endif
+
+{% include 'plugin_settings.vim' %}
+
+if filereadable(expand('{{ editor_vim_configdir }}/plugin_settings.vim'))
+  source {{ editor_vim_configdir }}/plugin_settings.vim
+endif
+
+"
+"" editor-vim config
+"*****************************************************************************
 
 "*****************************************************************************
 "" Convenience variables
