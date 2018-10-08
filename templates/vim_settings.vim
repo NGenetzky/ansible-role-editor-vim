@@ -108,6 +108,12 @@ set wildignore+=log,logs
 set wildignore+=vendor
 set wildmode=longest:full,list:full
 
+"
+" Visual
+"
+
+set background=dark
+
 if filereadable(expand('{{ editor_vim_configdir }}/vim_settings.vim'))
   source {{ editor_vim_configdir }}vim_settings.vim
 endif
