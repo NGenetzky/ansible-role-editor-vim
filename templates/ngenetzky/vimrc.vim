@@ -2,13 +2,40 @@
 " Maintainer:   Nathan Genetzky
 " Version:      0.1
 
+""" plugin manager
+"*******************************************************************************
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('{{ editor_vim_datadir }}/plugged')
+
+{% include 'plugins.vim' %}
+
+if filereadable(expand('{{ editor_vim_configdir }}/plugins.vim'))
+  source {{ editor_vim_configdir }}/plugins.vim
+endif
+
+" Initialize plugin system
+call plug#end()
+" plugins
+"*******************************************************************************
+"
+"
+""" vim_settings {
+"*******************************************************************************
+
 {% include 'vim_settings.vim' %}
 
+" } vim_settings
+"*******************************************************************************
 
-{% include 'vim-plug.vim' %}
-
+""" plugin_settings
+"*******************************************************************************
 
 {% include 'plugin_settings.vim' %}
+
+" plugin_settings
+"*******************************************************************************
 
 """ modelines
 " https://vi.stackexchange.com/a/3820
