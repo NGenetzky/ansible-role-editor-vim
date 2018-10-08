@@ -3,4 +3,5 @@
   roles:
     - editor-vim
   vars:
-    editor_vim_template_vimrc: "vim-bootstrap/c-html-js-python.vim"
+    # editor_vim_template_vimrc: "vim-bootstrap/c-html-js-python.vim"
+    editor_vim_template_vimrc: "ngenetzky/vimrc.vim"
