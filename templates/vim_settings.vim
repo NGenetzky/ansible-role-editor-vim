@@ -45,9 +45,9 @@ set matchtime=3                 "mat:   How long to flash brackets
 " Tabs
 "
 
-set tabstop=2                   "ts:    number of spaces that a tab renders as
-set shiftwidth=2                "sw:    number of spaces to use for autoindent
-set softtabstop=2               "sts:   number of spaces that tabs insert
+set tabstop=4                   "ts:    number of spaces that a tab renders as
+set shiftwidth=4                "sw:    number of spaces to use for autoindent
+set softtabstop=4               "sts:   number of spaces that tabs insert
 set smarttab                    "sta:   helps with backspacing because of expandtab
 set expandtab                   "et:    uses spaces instead of tab characters
 
